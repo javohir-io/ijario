@@ -202,7 +202,7 @@ void main() {
     });
 
     test('active count ignores the city chips', () {
-      final c = const FilterCriteria(city: 'Toshkent', ownerOnly: true, minRooms: 2);
+      const c = FilterCriteria(city: 'Toshkent', ownerOnly: true, minRooms: 2);
       expect(c.activeCount, 2);
       expect(c.clearedSheetFilters().activeCount, 0);
       expect(c.clearedSheetFilters().city, 'Toshkent');

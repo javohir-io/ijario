@@ -220,7 +220,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final firstName = user?.fullName.trim().split(RegExp(r'\s+')).first;
 
     return ClipRRect(
-      borderRadius: BorderRadius.vertical(bottom: Radius.circular(BRadius.sheet)),
+      borderRadius: const BorderRadius.vertical(bottom: Radius.circular(BRadius.sheet)),
       child: AuroraBackground(
         child: Padding(
           padding: EdgeInsets.fromLTRB(margin, topInset + 14, margin, 26),
