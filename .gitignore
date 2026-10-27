@@ -1,0 +1,20 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Secrets: never commit these
+.env
+*.env
+!*.env.example
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.db
+
+# Flutter
+.dart_tool/
+build/

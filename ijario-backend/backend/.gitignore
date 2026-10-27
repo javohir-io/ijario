@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+test.db
+.pytest_cache/
+uploads/**/*.jpg
+uploads/**/*.jpeg
+uploads/**/*.png
+uploads/**/*.webp
+uploads/**/*.gif
+!uploads/**/.gitkeep

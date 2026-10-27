@@ -1,0 +1,25 @@
+name: Flutter app
+
+on:
+  push:
+    branches: [main]
+    paths: ["ijario-app/**", ".github/workflows/app.yml"]
+  pull_request:
+    paths: ["ijario-app/**", ".github/workflows/app.yml"]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ijario-app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: flutter test
+      - run: flutter build web --release

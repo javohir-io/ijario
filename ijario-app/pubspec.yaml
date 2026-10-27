@@ -1,0 +1,48 @@
+name: ijario
+description: "Ijario - O'zbekiston uchun ishonchli ijara platformasi."
+publish_to: 'none'
+version: 2.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.2
+  file_picker: ^8.1.2
+  web_socket_channel: ^3.0.1
+  shared_preferences: ^2.3.2
+  url_launcher: ^6.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    # Display: Cormorant Garamond Italic (the serif from the brand palette card).
+    - family: Cormorant
+      fonts:
+        - asset: assets/fonts/CormorantGaramond-Italic-500.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/CormorantGaramond-Italic-600.ttf
+          weight: 600
+          style: italic
+    # UI: Manrope. It has Latin-Extended and Cyrillic, so Uzbek and Russian
+    # listings both render properly.
+    - family: Manrope
+      fonts:
+        - asset: assets/fonts/Manrope-400.ttf
+          weight: 400
+        - asset: assets/fonts/Manrope-500.ttf
+          weight: 500
+        - asset: assets/fonts/Manrope-600.ttf
+          weight: 600
+        - asset: assets/fonts/Manrope-700.ttf
+          weight: 700
+        - asset: assets/fonts/Manrope-800.ttf
+          weight: 800

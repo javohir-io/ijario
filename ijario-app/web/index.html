@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <!--
+    If you serve the app from a sub-path, set the base href at build time:
+      flutter build web --base-href /your-path/
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Ijario - O'zbekiston uchun ishonchli ijara platformasi. Narxlarni solishtiring, egasi bilan yozishing, ko'rishga yoziling.">
+  <meta name="theme-color" content="#5E1E2B">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Ijario">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <title>Ijario</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    /* Branded loading screen: same colours as the app's splash, so the
+       hand-off to Flutter is seamless. Removed on Flutter's first frame. */
+    html, body { margin: 0; height: 100%; background: #3B121B; }
+    #ijario-loader {
+      position: fixed; inset: 0; z-index: 10;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+      background:
+        radial-gradient(90% 70% at 25% 20%, #5E1E2B 0%, rgba(94,30,43,0) 70%),
+        radial-gradient(60% 50% at 85% 40%, rgba(140,52,70,.6) 0%, rgba(140,52,70,0) 70%),
+        radial-gradient(60% 45% at 55% 105%, rgba(210,188,168,.5) 0%, rgba(210,188,168,0) 70%),
+        #3B121B;
+      transition: opacity .6s cubic-bezier(.4,0,.2,1);
+    }
+    #ijario-loader.hide { opacity: 0; pointer-events: none; }
+    #ijario-loader svg { width: 84px; height: 84px; animation: breathe 2.4s cubic-bezier(.4,0,.2,1) infinite; }
+    #ijario-loader span {
+      font: italic 600 46px/1 "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      color: #DADCDD; letter-spacing: -.5px;
+    }
+    @keyframes breathe { 0%,100% { transform: scale(1); opacity: .92 } 50% { transform: scale(1.05); opacity: 1 } }
+    @media (prefers-reduced-motion: reduce) { #ijario-loader svg { animation: none; } }
+  </style>
+</head>
+<body>
+  <div id="ijario-loader" role="status" aria-label="Yuklanmoqda">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#DADCDD"/><stop offset=".4" stop-color="#D2BCA8"/>
+          <stop offset=".7" stop-color="#F8F7F5"/><stop offset="1" stop-color="#D2BCA8"/>
+        </linearGradient>
+      </defs>
+      <!-- outer arch minus inner arch (even-odd), same proportions as the app mark -->
+      <path fill="url(#g)" fill-rule="evenodd" d="M 27.86 80.00 L 27.86 42.14 A 22.14 22.14 0 0 1 72.14 42.14 L 72.14 80.00 Z M 41.14 74.60 L 41.14 52.26 A 8.86 8.86 0 0 1 58.86 52.26 L 58.86 74.60 Z"/>
+    </svg>
+    <span>Ijario</span>
+  </div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var el = document.getElementById('ijario-loader');
+      if (!el) return;
+      el.classList.add('hide');
+      setTimeout(function () { el.remove(); }, 700);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
