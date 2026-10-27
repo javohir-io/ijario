@@ -11,9 +11,8 @@ a phone such as "iPhone 14 Pro" or "Pixel 7", then use Win+Shift+S or the DevToo
 | `app-02-home.png` | Home with the hero, search, chips and at least two listing cards with photos |
 | `app-03-filters.png` | The filter sheet open, with the live result count on the button |
 | `app-04-detail.png` | A listing detail page scrolled so the price, stats and **price insight** are visible |
-| `app-05-viewing.png` | The "Ko'rishga yozilish" sheet with a day and hour picked |
-| `app-06-dark.png` | Home in dark theme (Profile → Ko'rinish → Qorong'i) |
-| `web-desktop-home.png` | Home in a wide desktop browser window (2–3 column grid) |
+| `app-05-profile.png` | The "Ko'rishga yozilish" sheet with a day and hour picked |
+| `app-06-light.png` | Home in light theme (Profile → Ko'rinish → Qorong'i) |
 
 Tips: sign in as `demo.owner@ijario.uz`; use PNG; phone shots about 390 px wide look best;
 keep them free of personal data.
