@@ -58,11 +58,7 @@ Renters browse listings without an account, compare prices, message owners and b
 
 | Listing + price insight | Book a viewing | Dark theme |
 |:--:|:--:|:--:|
-| <img src="docs/screenshots/app-04-detail.png" width="240"> | <img src="docs/screenshots/app-05-viewing.png" width="240"> | <img src="docs/screenshots/app-06-dark.png" width="240"> |
-
-### Web
-
-![Home on desktop](docs/screenshots/web-desktop-home.png)
+| <img src="docs/screenshots/app-04-detail.png" width="240"> | <img src="docs/screenshots/app-05-profile.png" width="240"> | <img src="docs/screenshots/app-06-light.png" width="240"> |
 
 ## Architecture
 
